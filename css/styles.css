@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../assets/fonts/Fontspring-DEMO-mersin-medium.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../assets/fonts/Fontspring-DEMO-mersin-regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Museo Sans';
+    src: url('../assets/fonts/Fontspring-DEMO-mersin-bold.otf') format('opentype');
+    font-weight: 700;
+}
+
 :root {
     --white: #ffffff;
     --dark-blue: #000E38;
@@ -37,7 +55,6 @@ html {
     font-size: 3rem;
     font-family: "Open Sans", sans-serif;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -130,7 +147,6 @@ header {
 .banner {
     display: flex;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* height: 100vh; */
     padding-top: 10rem;
     align-items: center;
     justify-content: space-between;
@@ -153,7 +169,6 @@ header {
     font-size: 3.2rem;
     font-family: 'Museo Sans', sans-serif;
     background: linear-gradient(to right, var(--light-orange), var(--light-khaki));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 150%;
@@ -165,11 +180,14 @@ header {
     font-size: 4.5rem;
     font-family: 'Museo Sans', sans-serif;
     background: linear-gradient(to right, var(--light-orange), var(--light-khaki));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 150%;
     color: transparent;
+}
+
+.banner-text h1 span {
+    font-family: "Open Sans", sans-serif;
 }
 
 .banner-text h4 {
@@ -178,7 +196,6 @@ header {
     font-style: normal;
     font-family: 'Museo Sans', sans-serif;
     background: linear-gradient(to right, var(--light-orange), var(--light-khaki));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -193,24 +210,22 @@ header {
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
+    cursor: default;
 }
 
 .banner-button .left-section h3,
 .banner-button .right-section h3 {
     font-weight: 700;
-    /* font-style: bold; */
     font-size: 2.2rem;
     font-family: "Open Sans", sans-serif;
     line-height: 120%;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
 
 .container {
-    /* height: 100vh; */
     display: flex;
     align-items: stretch;
 }
@@ -224,12 +239,10 @@ header {
 .banner-button .left-section h5,
 .banner-button .right-section h5 {
     font-weight: 500;
-    /* font-style: bold; */
     font-size: 1.7rem;
     font-family: "Open Sans", sans-serif;
     line-height: 120%;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -258,7 +271,6 @@ header {
 
 .banner-form h3 {
     font-weight: 700;
-    /* font-style: bold; */
     font-size: 3.7rem;
     font-family: "Archivo", sans-serif;
     line-height: 120%;
@@ -310,11 +322,13 @@ header {
 }
 
 .banner-btn {
-    height: 6rem;
+    height: 5rem;
     border-radius: 0.15rem;
     display: flex;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.4rem;
 }
 
 .banner-btn .left-section {
@@ -324,7 +338,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-left-radius: 0.4rem;
+    border-bottom-left-radius: 2rem;
     border-top-left-radius: 0.4rem;
     transition: all 0.3s ease;
 }
@@ -346,6 +360,12 @@ header {
     border-bottom-right-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
     transition: all 0.3s ease;
+}
+
+.banner-btn-right-section {
+    background: linear-gradient(to right, var(--dark-blue), var(--dark-purple)) !important;
+    border-bottom-right-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
 }
 
 .banner-btn .right-section h5 {
@@ -411,7 +431,6 @@ header {
     font-family: "Open Sans", sans-serif;
     line-height: 120%;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -426,12 +445,12 @@ header {
 
 /* participating-school */
 .participating-school h2 {
-    font-weight: normal;
+    font-weight: 700;
+    font-style: bold;
     font-size: 3.2rem;
     font-family: "Open Sans", sans-serif;
     line-height: 120%;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -529,9 +548,7 @@ header {
 
 /* school-appoinment */
 .school-appoinment {
-    /* position: relative; */
     margin-top: 4rem;
-    /* max-height: 60rem; */
     overflow: hidden
 }
 
@@ -560,7 +577,6 @@ header {
     font-family: "Open Sans", sans-serif;
     line-height: 110%;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -572,7 +588,6 @@ header {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
     background: linear-gradient(to right, var(--dark-lavender), var(--electric-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -628,7 +643,6 @@ header {
     font-size: 1.2rem;
     font-family: "Open Sans", sans-serif;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -659,7 +673,6 @@ header {
     font-size: 3.5rem;
     font-family: 'Museo Sans', sans-serif;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -722,11 +735,9 @@ header {
 
 .exhibition-must-visit .exhibition-row .exhibition-card h5 {
     font-weight: 700;
-    /* font-style: bold; */
     font-size: 2.4rem;
     font-family: "Open Sans", sans-serif;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -739,7 +750,6 @@ header {
     font-size: 2rem;
     font-family: "Open Sans", sans-serif;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
@@ -947,7 +957,6 @@ footer {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     background: linear-gradient(to right, var(--dark-blue), var(--dark-purple));
-    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 3rem 0;
@@ -1049,7 +1058,6 @@ footer {
 
 
     .school-appoinment .content {
-        /* position: relative; */
         position: absolute;
         top: 50%;
         left: 5%;
@@ -1088,10 +1096,6 @@ footer {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    /* .award-row>* {
-        width: calc(50% - 2rem);
-    } */
 }
 
 @media (max-width: 759px) {
@@ -1106,7 +1110,6 @@ footer {
     }
 
     .gallery-swiper::before {
-        /* top: -40px; */
         width: 100%;
     }
 
